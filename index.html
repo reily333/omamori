@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>専魂御守鑑定｜あなただけの御守りを霊視で奉製</title>
-<meta name="description" content="あなたの波動を霊視で深く読み解き、ぴったりの御守りを奉製いたします。限定5名様の特別鑑定。">
+<title>縁結び御守鑑定｜いと 人生の縁導師</title>
+<meta name="description" content="霊視×お寺の教えで、あなたの縁と運命を読み解く。稲荷の眼で嘘まで見抜く縁導師・いとによる限定5名様の特別鑑定。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ===== CSS Variables ===== */
 :root {
   --crimson: #8B0000;
   --vermillion: #C41E3A;
@@ -20,13 +19,7 @@
   --ink: #1A0A0A;
   --ink-light: #2D1515;
   --paper: #FDF5E6;
-  --paper-warm: #FAF0DC;
-  --paper-dark: #F0E0C0;
-  --white-mist: rgba(255,255,255,0.08);
-  --shadow-red: rgba(139,0,0,0.3);
 }
-
-/* ===== Reset & Base ===== */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -37,13 +30,9 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ===== Utility ===== */
 .section-inner { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 .accent-text { color: var(--gold); font-family: 'Shippori Mincho', serif; }
 .red-accent { color: var(--vermillion); }
-
-/* ===== Decorative Patterns ===== */
 .pattern-overlay {
   position: absolute; inset: 0;
   background-image:
@@ -56,8 +45,6 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23C9A84C' stroke-width='0.5'/%3E%3Cpath d='M30 0L30 60M0 30L60 30' fill='none' stroke='%23C9A84C' stroke-width='0.3'/%3E%3C/svg%3E");
   pointer-events: none;
 }
-
-/* ===== Floating Particles ===== */
 .particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
 .particle {
   position: absolute; width: 3px; height: 3px;
@@ -70,14 +57,10 @@ body {
   80% { opacity:0.3; }
   100% { opacity:0; transform: translateY(-10vh) scale(1.2); }
 }
-
-/* ===== Scroll Fade-in ===== */
 .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* ===========================
-   HERO SECTION
-   =========================== */
+/* HERO */
 .hero {
   position: relative; min-height: 100vh;
   display: flex; align-items: center; justify-content: center; text-align: center;
@@ -103,7 +86,7 @@ body {
   animation: fadeInDown 1s ease 0.3s both;
 }
 .hero-badge::before, .hero-badge::after {
-  content: '\26E9'; position: absolute; top: 50%; transform: translateY(-50%);
+  content: '⛩'; position: absolute; top: 50%; transform: translateY(-50%);
   font-size: 0.7rem; opacity: 0.7;
 }
 .hero-badge::before { left: 8px; }
@@ -123,10 +106,7 @@ body {
   line-height: 1.5; letter-spacing: 0.08em; color: var(--paper);
   margin-bottom: 24px; animation: fadeInDown 1s ease 0.8s both;
 }
-.hero-title em {
-  font-style: normal; color: var(--gold);
-  text-shadow: 0 0 30px rgba(201,168,76,0.4);
-}
+.hero-title em { font-style: normal; color: var(--gold); text-shadow: 0 0 30px rgba(201,168,76,0.4); }
 .hero-sub {
   font-family: 'Noto Serif JP', serif; font-size: 0.92rem;
   color: rgba(253,245,230,0.7); line-height: 2.2; letter-spacing: 0.06em;
@@ -155,61 +135,40 @@ body {
   50% { transform: translateX(-50%) translateY(10px); }
 }
 
-/* ===========================
-   COUNTDOWN TIMER
-   =========================== */
+/* COUNTDOWN */
 .countdown-section {
   position: relative; padding: 60px 0;
   background: linear-gradient(180deg, var(--ink) 0%, var(--ink-light) 50%, var(--ink) 100%);
   text-align: center;
 }
-.countdown-label {
-  font-family: 'Shippori Mincho', serif; font-size: 0.9rem;
-  color: var(--gold); letter-spacing: 0.2em; margin-bottom: 8px;
-}
+.countdown-label { font-family: 'Shippori Mincho', serif; font-size: 0.9rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 8px; }
 .countdown-sublabel { font-size: 0.82rem; color: rgba(253,245,230,0.5); margin-bottom: 28px; }
 .countdown-wrap { display: flex; justify-content: center; gap: 16px; margin-bottom: 20px; }
 .countdown-unit { display: flex; flex-direction: column; align-items: center; min-width: 70px; }
 .countdown-num {
-  font-family: 'Shippori Mincho', serif; font-size: 2.4rem; font-weight: 700;
-  color: var(--paper);
+  font-family: 'Shippori Mincho', serif; font-size: 2.4rem; font-weight: 700; color: var(--paper);
   background: linear-gradient(135deg, var(--crimson), var(--deep-red));
   border: 1px solid rgba(201,168,76,0.3); border-radius: 8px;
   width: 72px; height: 72px; display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 20px rgba(139,0,0,0.4);
 }
 .countdown-text { font-size: 0.72rem; color: var(--gold-dark); letter-spacing: 0.15em; margin-top: 8px; }
-.countdown-status {
-  font-family: 'Shippori Mincho', serif; font-size: 1rem;
-  color: var(--vermillion); letter-spacing: 0.1em; margin-top: 16px;
-}
+.countdown-status { font-family: 'Shippori Mincho', serif; font-size: 1rem; color: var(--vermillion); letter-spacing: 0.1em; margin-top: 16px; }
 
-/* ===========================
-   IMAGE SECTION
-   =========================== */
-.hero-image-section {
-  padding: 0 24px; max-width: 720px; margin: -20px auto 0;
-}
-.hero-image-section img {
-  width: 100%; border-radius: 6px; display: block;
-}
+/* IMAGE */
+.hero-image-section { padding: 0 24px; max-width: 720px; margin: -20px auto 0; }
 .image-placeholder {
   width: 100%; aspect-ratio: 1/1;
   background: linear-gradient(135deg, var(--ink-light) 0%, rgba(139,0,0,0.2) 100%);
   border: 1px dashed rgba(201,168,76,0.3); border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
   color: rgba(201,168,76,0.4); font-family: 'Shippori Mincho', serif;
-  font-size: 0.85rem; letter-spacing: 0.1em; position: relative; overflow: hidden;
+  font-size: 0.85rem; letter-spacing: 0.1em;
 }
 
-/* ===========================
-   PROBLEM SECTION
-   =========================== */
+/* SECTIONS */
 .problem-section { position: relative; padding: 100px 0; background: var(--ink); }
-.section-torii {
-  text-align: center; font-size: 1.4rem; color: var(--vermillion);
-  margin-bottom: 12px; opacity: 0.7;
-}
+.section-torii { text-align: center; font-size: 1.4rem; color: var(--vermillion); margin-bottom: 12px; opacity: 0.7; }
 .section-title {
   font-family: 'Shippori Mincho', serif;
   font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 600;
@@ -224,26 +183,16 @@ body {
   max-width: 600px; margin: 0 auto;
 }
 .problem-text p { margin-bottom: 28px; }
-.divider {
-  width: 60px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 48px auto;
-}
+.divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 48px auto; }
 .problem-list { list-style: none; max-width: 540px; margin: 40px auto 0; }
 .problem-list li {
   position: relative; padding: 18px 20px 18px 48px;
   font-family: 'Noto Serif JP', serif; font-size: 0.92rem;
-  color: rgba(253,245,230,0.8); border-bottom: 1px solid rgba(201,168,76,0.08);
-  letter-spacing: 0.03em;
+  color: rgba(253,245,230,0.8); border-bottom: 1px solid rgba(201,168,76,0.08); letter-spacing: 0.03em;
 }
-.problem-list li::before {
-  content: '\25AA'; position: absolute; left: 20px;
-  color: var(--vermillion); font-size: 0.7rem;
-}
+.problem-list li::before { content: '▪'; position: absolute; left: 20px; color: var(--vermillion); font-size: 0.7rem; }
 
-/* ===========================
-   SOLUTION SECTION
-   =========================== */
+/* SOLUTION */
 .solution-section {
   position: relative; padding: 100px 0;
   background: linear-gradient(180deg, var(--ink) 0%, var(--deep-red) 50%, var(--ink) 100%);
@@ -256,12 +205,10 @@ body {
 }
 .solution-box::before {
   content: ''; position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-  width: 80px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 .solution-title {
-  font-family: 'Shippori Mincho', serif;
-  font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 600;
+  font-family: 'Shippori Mincho', serif; font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 600;
   color: var(--gold); letter-spacing: 0.1em; margin-bottom: 32px; line-height: 1.8;
 }
 .solution-desc {
@@ -270,9 +217,7 @@ body {
 }
 .solution-desc p { margin-bottom: 24px; }
 
-/* ===========================
-   PROCESS SECTION
-   =========================== */
+/* PROCESS */
 .process-section { position: relative; padding: 100px 0; background: var(--ink); }
 .process-steps {
   display: flex; flex-direction: column; gap: 40px; margin-top: 50px;
@@ -283,8 +228,7 @@ body {
   flex-shrink: 0; width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--gold); border-radius: 50%;
-  font-family: 'Shippori Mincho', serif; font-size: 1.1rem; font-weight: 600;
-  color: var(--gold);
+  font-family: 'Shippori Mincho', serif; font-size: 1.1rem; font-weight: 600; color: var(--gold);
 }
 .step-content h3 {
   font-family: 'Shippori Mincho', serif; font-size: 1.05rem; font-weight: 600;
@@ -292,9 +236,7 @@ body {
 }
 .step-content p { font-size: 0.88rem; color: rgba(253,245,230,0.65); line-height: 2; }
 
-/* ===========================
-   PROFILE SECTION
-   =========================== */
+/* PROFILE */
 .profile-section {
   position: relative; padding: 100px 0;
   background: linear-gradient(180deg, var(--ink) 0%, var(--ink-light) 100%);
@@ -307,17 +249,9 @@ body {
   display: flex; align-items: center; justify-content: center;
   color: rgba(201,168,76,0.3); font-size: 0.75rem; letter-spacing: 0.1em;
 }
-.profile-image-wrap img {
-  width: 100%; height: 100%; object-fit: cover;
-}
-.profile-name {
-  font-family: 'Shippori Mincho', serif; font-size: 1.4rem; font-weight: 600;
-  color: var(--paper); letter-spacing: 0.15em; margin-bottom: 8px;
-}
-.profile-role {
-  font-family: 'Shippori Mincho', serif; font-size: 0.85rem;
-  color: var(--gold); letter-spacing: 0.2em; margin-bottom: 28px;
-}
+.profile-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.profile-name { font-family: 'Shippori Mincho', serif; font-size: 1.4rem; font-weight: 600; color: var(--paper); letter-spacing: 0.15em; margin-bottom: 8px; }
+.profile-role { font-family: 'Shippori Mincho', serif; font-size: 0.85rem; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 28px; }
 .profile-bio {
   font-family: 'Noto Serif JP', serif; font-size: 0.9rem; line-height: 2.4;
   color: rgba(253,245,230,0.8); max-width: 520px; margin: 0 auto;
@@ -328,9 +262,7 @@ body {
 .stat-num { font-family: 'Shippori Mincho', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); }
 .stat-label { font-size: 0.75rem; color: rgba(253,245,230,0.5); letter-spacing: 0.1em; margin-top: 4px; }
 
-/* ===========================
-   WHY 5 SECTION
-   =========================== */
+/* WHY */
 .why-section {
   position: relative; padding: 100px 0;
   background: linear-gradient(180deg, var(--ink-light) 0%, var(--deep-red) 50%, var(--ink) 100%);
@@ -341,9 +273,7 @@ body {
   color: rgba(253,245,230,0.85); max-width: 520px; margin: 0 auto; letter-spacing: 0.03em;
 }
 
-/* ===========================
-   PRICING SECTION
-   =========================== */
+/* PRICING */
 .pricing-section {
   position: relative; padding: 100px 0;
   background: linear-gradient(180deg, var(--ink) 0%, var(--deep-red) 50%, var(--ink) 100%);
@@ -360,199 +290,77 @@ body {
   padding: 4px 24px; font-family: 'Shippori Mincho', serif; font-size: 0.8rem;
   color: var(--gold); letter-spacing: 0.2em; border-radius: 20px; white-space: nowrap;
 }
-.pricing-title {
-  font-family: 'Shippori Mincho', serif; font-size: 1.2rem; font-weight: 600;
-  color: var(--paper); letter-spacing: 0.1em; margin-bottom: 8px; margin-top: 12px;
-}
+.pricing-title { font-family: 'Shippori Mincho', serif; font-size: 1.2rem; font-weight: 600; color: var(--paper); letter-spacing: 0.1em; margin-bottom: 8px; margin-top: 12px; }
 .pricing-subtitle { font-size: 0.82rem; color: rgba(253,245,230,0.5); margin-bottom: 32px; }
-.original-price {
-  font-family: 'Shippori Mincho', serif; font-size: 1.1rem;
-  color: rgba(253,245,230,0.4); text-decoration: line-through; margin-bottom: 8px;
-}
-.special-price {
-  font-family: 'Shippori Mincho', serif; font-size: 3rem; font-weight: 800;
-  color: var(--gold); letter-spacing: 0.05em; line-height: 1.2;
-  text-shadow: 0 0 40px rgba(201,168,76,0.3);
-}
+.original-price { font-family: 'Shippori Mincho', serif; font-size: 1.1rem; color: rgba(253,245,230,0.4); text-decoration: line-through; margin-bottom: 8px; }
+.special-price { font-family: 'Shippori Mincho', serif; font-size: 3rem; font-weight: 800; color: var(--gold); letter-spacing: 0.05em; line-height: 1.2; text-shadow: 0 0 40px rgba(201,168,76,0.3); }
 .special-price .yen { font-size: 1.4rem; font-weight: 600; }
 .special-price .tax { font-size: 0.75rem; font-weight: 400; color: rgba(253,245,230,0.4); }
-.pricing-reason {
-  font-family: 'Noto Serif JP', serif; font-size: 0.82rem;
-  color: rgba(253,245,230,0.6); margin-top: 16px; line-height: 1.9;
-  max-width: 380px; margin-left: auto; margin-right: auto;
-}
-.pricing-includes {
-  list-style: none; margin-top: 32px; text-align: left;
-  max-width: 340px; margin-left: auto; margin-right: auto;
-}
-.pricing-includes li {
-  padding: 10px 0; font-size: 0.88rem; color: rgba(253,245,230,0.8);
-  border-bottom: 1px solid rgba(201,168,76,0.08); padding-left: 24px; position: relative;
-}
-.pricing-includes li::before {
-  content: '\2726'; position: absolute; left: 0; color: var(--gold); font-size: 0.65rem;
-}
+.pricing-reason { font-family: 'Noto Serif JP', serif; font-size: 0.82rem; color: rgba(253,245,230,0.6); margin-top: 16px; line-height: 1.9; max-width: 380px; margin-left: auto; margin-right: auto; }
+.pricing-includes { list-style: none; margin-top: 32px; text-align: left; max-width: 340px; margin-left: auto; margin-right: auto; }
+.pricing-includes li { padding: 10px 0; font-size: 0.88rem; color: rgba(253,245,230,0.8); border-bottom: 1px solid rgba(201,168,76,0.08); padding-left: 24px; position: relative; }
+.pricing-includes li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.65rem; }
 
-/* ===========================
-   VOICE SECTION
-   =========================== */
-.voice-section {
-  position: relative; padding: 100px 0;
-  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-light) 100%);
-}
-.voice-cards {
-  display: flex; flex-direction: column; gap: 28px; margin-top: 50px;
-  max-width: 560px; margin-left: auto; margin-right: auto;
-}
-.voice-card {
-  background: rgba(139,0,0,0.1); border: 1px solid rgba(201,168,76,0.1);
-  border-radius: 10px; padding: 28px 24px; position: relative;
-}
-.voice-card::before {
-  content: '\201C'; position: absolute; top: 12px; left: 16px;
-  font-family: 'Shippori Mincho', serif; font-size: 2.5rem;
-  color: rgba(201,168,76,0.15); line-height: 1;
-}
-.voice-card p {
-  font-family: 'Noto Serif JP', serif; font-size: 0.88rem; line-height: 2.2;
-  color: rgba(253,245,230,0.75); padding-left: 8px;
-}
-.voice-card .voice-attr {
-  margin-top: 12px; font-size: 0.78rem; color: var(--gold-dark);
-  text-align: right; letter-spacing: 0.05em;
-}
+/* VOICE */
+.voice-section { position: relative; padding: 100px 0; background: linear-gradient(180deg, var(--ink) 0%, var(--ink-light) 100%); }
+.voice-cards { display: flex; flex-direction: column; gap: 28px; margin-top: 50px; max-width: 560px; margin-left: auto; margin-right: auto; }
+.voice-card { background: rgba(139,0,0,0.1); border: 1px solid rgba(201,168,76,0.1); border-radius: 10px; padding: 28px 24px; position: relative; }
+.voice-card::before { content: '"'; position: absolute; top: 12px; left: 16px; font-family: 'Shippori Mincho', serif; font-size: 2.5rem; color: rgba(201,168,76,0.15); line-height: 1; }
+.voice-card p { font-family: 'Noto Serif JP', serif; font-size: 0.88rem; line-height: 2.2; color: rgba(253,245,230,0.75); padding-left: 8px; }
+.voice-card .voice-attr { margin-top: 12px; font-size: 0.78rem; color: var(--gold-dark); text-align: right; letter-spacing: 0.05em; }
 
-/* ===========================
-   FAQ SECTION
-   =========================== */
+/* FAQ */
 .faq-section { position: relative; padding: 100px 0; background: var(--ink); }
 .faq-list { max-width: 560px; margin: 50px auto 0; }
 .faq-item { border-bottom: 1px solid rgba(201,168,76,0.1); padding: 24px 0; }
-.faq-q {
-  font-family: 'Shippori Mincho', serif; font-size: 0.95rem; color: var(--gold);
-  letter-spacing: 0.05em; cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-}
+.faq-q { font-family: 'Shippori Mincho', serif; font-size: 0.95rem; color: var(--gold); letter-spacing: 0.05em; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
 .faq-q::before { content: 'Q.'; margin-right: 12px; color: var(--vermillion); font-weight: 700; }
 .faq-q .toggle { font-size: 1.2rem; transition: transform 0.3s; color: rgba(253,245,230,0.3); }
 .faq-item.open .faq-q .toggle { transform: rotate(45deg); }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
 .faq-item.open .faq-a { max-height: 300px; padding-top: 16px; }
-.faq-a p {
-  font-size: 0.88rem; color: rgba(253,245,230,0.65); line-height: 2; padding-left: 28px;
-}
+.faq-a p { font-size: 0.88rem; color: rgba(253,245,230,0.65); line-height: 2; padding-left: 28px; }
 
-/* ===========================
-   CTA SECTION
-   =========================== */
+/* CTA */
 .cta-section { position: relative; padding: 100px 0; background: var(--ink); text-align: center; }
-.cta-text {
-  font-family: 'Noto Serif JP', serif; font-size: 0.92rem;
-  color: rgba(253,245,230,0.7); line-height: 2.2; max-width: 480px; margin: 0 auto 40px;
-}
+.cta-text { font-family: 'Noto Serif JP', serif; font-size: 0.92rem; color: rgba(253,245,230,0.7); line-height: 2.2; max-width: 480px; margin: 0 auto 40px; }
 .cta-button {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 20px 52px;
+  display: inline-flex; align-items: center; gap: 12px; padding: 20px 52px;
   background: linear-gradient(135deg, var(--crimson), var(--shrine-red));
   border: 1px solid var(--gold); border-radius: 6px;
   color: var(--gold); font-family: 'Shippori Mincho', serif;
   font-size: 1.1rem; font-weight: 600; letter-spacing: 0.15em;
-  text-decoration: none; transition: all 0.4s ease;
-  position: relative; overflow: hidden; cursor: pointer;
+  text-decoration: none; transition: all 0.4s ease; position: relative; overflow: hidden; cursor: pointer;
 }
-.cta-button::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, transparent, rgba(201,168,76,0.1), transparent);
-  transform: translateX(-100%); transition: transform 0.6s ease;
-}
+.cta-button::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent, rgba(201,168,76,0.1), transparent); transform: translateX(-100%); transition: transform 0.6s ease; }
 .cta-button:hover::before { transform: translateX(100%); }
-.cta-button:hover {
-  box-shadow: 0 0 40px rgba(139,0,0,0.5), 0 0 80px rgba(201,168,76,0.15);
-  transform: translateY(-2px);
-}
+.cta-button:hover { box-shadow: 0 0 40px rgba(139,0,0,0.5), 0 0 80px rgba(201,168,76,0.15); transform: translateY(-2px); }
 .cta-note { font-size: 0.78rem; color: rgba(253,245,230,0.4); margin-top: 20px; letter-spacing: 0.05em; }
-.cta-remaining {
-  display: inline-block; margin-top: 24px; padding: 8px 24px;
-  border: 1px solid var(--vermillion); border-radius: 4px;
-  font-family: 'Shippori Mincho', serif; font-size: 0.88rem;
-  color: var(--vermillion); letter-spacing: 0.1em; animation: pulse 2s infinite;
-}
+.cta-remaining { display: inline-block; margin-top: 24px; padding: 8px 24px; border: 1px solid var(--vermillion); border-radius: 4px; font-family: 'Shippori Mincho', serif; font-size: 0.88rem; color: var(--vermillion); letter-spacing: 0.1em; animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
 
-/* ===========================
-   FOOTER
-   =========================== */
-.footer {
-  padding: 40px 0; text-align: center; background: var(--ink);
-  border-top: 1px solid rgba(201,168,76,0.06);
-}
+/* FOOTER */
+.footer { padding: 40px 0; text-align: center; background: var(--ink); border-top: 1px solid rgba(201,168,76,0.06); }
 .footer p { font-size: 0.72rem; color: rgba(253,245,230,0.25); letter-spacing: 0.05em; }
 
-/* ===========================
-   PRE-LAUNCH MODAL
-   =========================== */
-.prelaunch-overlay {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(10,4,4,0.85); backdrop-filter: blur(8px);
-  align-items: center; justify-content: center;
-}
+/* MODAL */
+.prelaunch-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(10,4,4,0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; }
 .prelaunch-overlay.show { display: flex; }
-.prelaunch-modal {
-  background: linear-gradient(135deg, var(--ink-light), var(--deep-red));
-  border: 1px solid rgba(201,168,76,0.3); border-radius: 16px;
-  padding: 48px 36px; max-width: 400px; width: 90%; text-align: center;
-  animation: modalIn 0.4s ease;
-}
-@keyframes modalIn {
-  from { opacity:0; transform: scale(0.9) translateY(20px); }
-  to { opacity:1; transform: scale(1) translateY(0); }
-}
+.prelaunch-modal { background: linear-gradient(135deg, var(--ink-light), var(--deep-red)); border: 1px solid rgba(201,168,76,0.3); border-radius: 16px; padding: 48px 36px; max-width: 400px; width: 90%; text-align: center; animation: modalIn 0.4s ease; }
+@keyframes modalIn { from { opacity:0; transform: scale(0.9) translateY(20px); } to { opacity:1; transform: scale(1) translateY(0); } }
 .prelaunch-torii { font-size: 1.6rem; color: var(--vermillion); margin-bottom: 16px; opacity: 0.8; }
-.prelaunch-title {
-  font-family: 'Shippori Mincho', serif; font-size: 1.2rem; font-weight: 600;
-  color: var(--paper); letter-spacing: 0.1em; line-height: 1.7;
-}
-.prelaunch-divider {
-  width: 40px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 20px auto;
-}
-.prelaunch-text {
-  font-family: 'Noto Serif JP', serif; font-size: 0.9rem;
-  color: rgba(253,245,230,0.8); line-height: 2; letter-spacing: 0.03em;
-}
-.prelaunch-close {
-  margin-top: 28px; padding: 12px 36px; background: transparent;
-  border: 1px solid var(--gold); border-radius: 6px; color: var(--gold);
-  font-family: 'Shippori Mincho', serif; font-size: 0.9rem; letter-spacing: 0.1em;
-  cursor: pointer; transition: all 0.3s;
-}
+.prelaunch-title { font-family: 'Shippori Mincho', serif; font-size: 1.2rem; font-weight: 600; color: var(--paper); letter-spacing: 0.1em; line-height: 1.7; }
+.prelaunch-divider { width: 40px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 20px auto; }
+.prelaunch-text { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; color: rgba(253,245,230,0.8); line-height: 2; letter-spacing: 0.03em; }
+.prelaunch-close { margin-top: 28px; padding: 12px 36px; background: transparent; border: 1px solid var(--gold); border-radius: 6px; color: var(--gold); font-family: 'Shippori Mincho', serif; font-size: 0.9rem; letter-spacing: 0.1em; cursor: pointer; transition: all 0.3s; }
 .prelaunch-close:hover { background: rgba(201,168,76,0.1); }
 
-/* ===========================
-   STICKY CTA
-   =========================== */
-.sticky-cta {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(26,10,10,0.95); backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(201,168,76,0.15);
-  padding: 14px 20px; text-align: center;
-  transform: translateY(100%); transition: transform 0.5s ease;
-}
+/* STICKY CTA */
+.sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: rgba(26,10,10,0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(201,168,76,0.15); padding: 14px 20px; text-align: center; transform: translateY(100%); transition: transform 0.5s ease; }
 .sticky-cta.show { transform: translateY(0); }
-.sticky-cta-btn {
-  display: inline-block; padding: 14px 40px;
-  background: linear-gradient(135deg, var(--crimson), var(--shrine-red));
-  border: 1px solid var(--gold); border-radius: 6px;
-  color: var(--gold); font-family: 'Shippori Mincho', serif;
-  font-size: 0.95rem; font-weight: 600; letter-spacing: 0.12em;
-  text-decoration: none; width: 100%; max-width: 360px;
-}
+.sticky-cta-btn { display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, var(--crimson), var(--shrine-red)); border: 1px solid var(--gold); border-radius: 6px; color: var(--gold); font-family: 'Shippori Mincho', serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.12em; text-decoration: none; width: 100%; max-width: 360px; }
 .sticky-cta-sub { font-size: 0.7rem; color: rgba(253,245,230,0.4); margin-top: 4px; }
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
 @media (max-width: 640px) {
   .section-inner { padding: 0 18px; }
   .hero-title { font-size: 1.6rem; }
@@ -560,7 +368,7 @@ body {
   .countdown-wrap { gap: 10px; }
   .pricing-card { padding: 48px 24px; }
   .special-price { font-size: 2.4rem; }
-  .profile-stats { gap: 28px; }
+  .profile-stats { gap: 16px; flex-wrap: wrap; }
   .solution-box { padding: 48px 24px; }
   .process-step { gap: 16px; }
   .cta-button { padding: 18px 36px; font-size: 1rem; }
@@ -569,25 +377,24 @@ body {
 </head>
 <body>
 
-<!-- Floating Particles -->
 <div class="particles" id="particles"></div>
 
-<!-- ===== HERO SECTION ===== -->
+<!-- HERO -->
 <section class="hero">
   <div class="pattern-overlay"></div>
   <div class="asanoha-pattern"></div>
   <div class="hero-content">
-    <div class="hero-badge">四月 特別販売</div>
-    <p class="hero-lead">── 神前に灯された、ただひとつの祈り ──</p>
+    <div class="hero-badge">三月二十九日〜三十一日 特別販売</div>
+    <p class="hero-lead">── 稲荷の眼で、あなたの縁と運命を読み解く ──</p>
     <h1 class="hero-title">
-      あなたの波動の"いま"を、<br>
-      <em>霊視で深く読み解く</em>
+      いまあなたを縛っている<br>
+      <em>"見えない縁"を、霊視で解き放つ</em>
     </h1>
     <p class="hero-sub">
-      あなたが纏っている波動の状態を<br>
-      霊視によって詳細に鑑定いたします。<br>
+      霊視 × お寺の教えで、<br>
+      あなたの波動と縁の状態を詳細に鑑定いたします。<br>
       そしてその結果をもとに、<br>
-      <strong style="color: var(--gold-light);">あなたの波動にぴったり合った御守り</strong>を<br>
+      <strong style="color: var(--gold-light);">あなたの縁を守り、運命を好転させる御守り</strong>を<br>
       奉製できる可能性がございます。
     </p>
     <div class="hero-limited">
@@ -597,62 +404,48 @@ body {
   <div class="scroll-indicator"><span></span></div>
 </section>
 
-<!-- ===== COUNTDOWN TIMER ===== -->
+<!-- COUNTDOWN -->
 <section class="countdown-section" id="countdown">
   <div class="section-inner">
     <p class="countdown-label" id="countdown-label">◆ 販売開始まで ◆</p>
-    <p class="countdown-sublabel" id="countdown-sublabel">2026年4月1日（水）19:00 〜 4月5日（日）23:59</p>
+    <p class="countdown-sublabel" id="countdown-sublabel">2026年3月29日（日）19:00 〜 3月31日（火）23:59</p>
     <div class="countdown-wrap">
-      <div class="countdown-unit">
-        <div class="countdown-num" id="cd-days">--</div>
-        <div class="countdown-text">日</div>
-      </div>
-      <div class="countdown-unit">
-        <div class="countdown-num" id="cd-hours">--</div>
-        <div class="countdown-text">時間</div>
-      </div>
-      <div class="countdown-unit">
-        <div class="countdown-num" id="cd-mins">--</div>
-        <div class="countdown-text">分</div>
-      </div>
-      <div class="countdown-unit">
-        <div class="countdown-num" id="cd-secs">--</div>
-        <div class="countdown-text">秒</div>
-      </div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-days">--</div><div class="countdown-text">日</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-text">時間</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-text">分</div></div>
+      <div class="countdown-unit"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-text">秒</div></div>
     </div>
     <p class="countdown-status" id="countdown-status"></p>
   </div>
 </section>
 
-<!-- ===== IMAGE PLACEHOLDER ===== -->
+<!-- IMAGE -->
 <section class="hero-image-section">
-  <div class="image-placeholder">神社・鳥居の画像がここに入ります</div>
+  <div class="image-placeholder">神社・稲荷の画像がここに入ります</div>
 </section>
 
-<!-- ===== PROBLEM SECTION ===== -->
+<!-- PROBLEM -->
 <section class="problem-section">
   <div class="section-inner fade-in">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">
-      いま手にしているその御守り、<br>
-      <span class="red">本当にあなたの波動に合っていますか？</span>
+      いまあなたの周りで起きていること、<br>
+      <span class="red">すべて"縁の乱れ"から来ているかもしれません</span>
     </h2>
     <div class="problem-text">
       <p>
-        神社やお寺で手にすることができる御守りは、<br>
-        多くの方に届くよう祈願された大衆に向けたもの。<br>
-        もちろん、そこに込められた祈りは尊いものです。
+        片思いが実らない。復縁できない。<br>
+        お金がなかなか入ってこない。<br>
+        人間関係がうまくいかない。
       </p>
       <p>
-        けれど──<br>
-        <strong>あなたの波動に合っているとは限りません。</strong>
+        これらはすべて、<br>
+        <strong>あなたの縁の状態が乱れているサイン</strong>かもしれません。
       </p>
       <p>
-        人はそれぞれ異なる波動を持ち、<br>
-        その状態も日々変化しています。<br>
-        そもそも自分の波動がいま<br>
-        どのような状態にあるのかを知らなければ、<br>
-        本当に必要な"護り"を選ぶことすらできないのです。
+        縁は目に見えません。<br>
+        だからこそ、<strong>稲荷の眼で霊視</strong>しなければ、<br>
+        その乱れの根本を知ることはできないのです。
       </p>
     </div>
     <div class="divider"></div>
@@ -660,57 +453,55 @@ body {
       こんな想いが、胸のどこかにありませんか？
     </h3>
     <ul class="problem-list">
-      <li>御守りを持っていても、なぜか心が軽くならない</li>
-      <li>自分の波動がいまどんな状態なのか分からない</li>
-      <li>自分にとって何が必要な"護り"なのか見えてこない</li>
-      <li>漠然とした不安がずっと、胸の奥に居座っている</li>
-      <li>見えない力に頼りたいけれど、何を信じればいいのか迷っている</li>
-      <li>今の自分を変えたいのに、何から手をつければいいのか分からない</li>
+      <li>好きな人との縁がなかなか結ばれない、片思いが続いている</li>
+      <li>復縁したいのに、どうしても踏み出せない</li>
+      <li>頑張っているのにお金がなかなか入ってこない</li>
+      <li>人間関係のトラブルが繰り返し起きる</li>
+      <li>何かに守られている感覚がなく、孤独を感じる</li>
+      <li>運命を変えたいのに、何から始めればいいかわからない</li>
     </ul>
   </div>
 </section>
 
-<!-- ===== SOLUTION SECTION ===== -->
+<!-- SOLUTION -->
 <section class="solution-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title" style="color: var(--paper);">
-      まず、あなたの波動を知ること。<br>
-      <span class="gold">すべてはそこから始まります</span>
+      400年の歴史が宿る稲荷の眼で、<br>
+      <span class="gold">縁の乱れを見抜き、道を照らす</span>
     </h2>
     <div class="solution-box fade-in">
-      <h2 class="solution-title">専魂御守鑑定とは</h2>
+      <h2 class="solution-title">縁結び御守鑑定とは</h2>
       <div class="solution-desc">
         <p>
-          この鑑定では、あなたが今まとっている波動の状態を<br>
-          霊視によって深く、丁寧に読み解いていきます。
+          この鑑定では、霊視とお寺の教えを掛け合わせて、<br>
+          あなたの縁と運命の状態を深く読み解いていきます。
         </p>
         <p>
-          心の奥に潜む揺らぎ、エネルギーの流れ、<br>
-          いま必要としている力の方向性──<br>
-          あなた自身でも気づいていない波動の全体像を<br>
-          詳細にお伝えいたします。
+          片思い・復縁・金運・対人関係──<br>
+          なぜうまくいかないのか、その根本にある<br>
+          <span class="accent-text">縁の乱れと波動の状態</span>を詳細にお伝えします。
         </p>
         <p>
-          そして、鑑定の結果に基づき、<br>
-          <span class="accent-text">あなたの波動にぴったり合った御守り</span>を<br>
+          そして鑑定の結果をもとに、<br>
+          <span class="accent-text">あなたの縁を護り、運命を好転させる御守り</span>を<br>
           奉製することも可能です。
         </p>
         <p>
-          ただし、御守りに波動を込めるにはわたし自身の霊力を注ぐ必要があり、<br>
+          ただし、御守りの奉製にはわたし自身の霊力を注ぐ必要があり、<br>
           すべての方にお届けすることは叶いません。<br>
-          鑑定後、特に相性が深いと感じた方にのみ、<br>
-          御守りのご案内をさせていただきます。
+          鑑定後、特に縁の深い方にのみご案内いたします。
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROCESS SECTION ===== -->
+<!-- PROCESS -->
 <section class="process-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">御守りがあなたに届くまで</h2>
     <div class="process-steps fade-in">
       <div class="process-step">
@@ -730,117 +521,122 @@ body {
       <div class="process-step">
         <div class="step-number">参</div>
         <div class="step-content">
-          <h3>波動の霊視鑑定</h3>
-          <p>VIP専用LINEにてお悩みや想いをお聞きしたうえで、あなたの波動の状態を霊視で深く読み解きます。</p>
+          <h3>縁と波動の霊視鑑定</h3>
+          <p>VIP専用LINEにてお悩みや想いをお聞きしたうえで、稲荷の眼であなたの縁と波動を深く読み解きます。</p>
         </div>
       </div>
       <div class="process-step">
         <div class="step-number">肆</div>
         <div class="step-content">
           <h3>鑑定結果のお届け</h3>
-          <p>VIP専用LINEにて、あなたの波動の全体像と今必要な力の方向性を鑑定文としてお送りいたします。</p>
+          <p>VIP専用LINEにて、縁の状態・運命の流れ・いま必要な力の方向性を鑑定文としてお送りいたします。</p>
         </div>
       </div>
       <div class="process-step">
         <div class="step-number">伍</div>
         <div class="step-content">
           <h3>御守りのご案内（対象の方のみ）</h3>
-          <p>鑑定の結果、わたしの波動と特に相性が深いと感じた方には、あなた専用の御守り奉製について別途ご案内させていただきます。</p>
+          <p>鑑定の結果、特に縁の深い方には、あなた専用の御守り奉製について別途ご案内させていただきます。</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROFILE SECTION ===== -->
+<!-- PROFILE -->
 <section class="profile-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">奉製を担う者について</h2>
     <div class="profile-card fade-in">
       <div class="profile-image-wrap">
         <span>画像</span>
       </div>
-      <h3 class="profile-name">澪（みお）</h3>
-      <p class="profile-role">巫女・霊視鑑定師</p>
+      <h3 class="profile-name">いと</h3>
+      <p class="profile-role">人生の縁導師｜霊視鑑定師</p>
       <div class="profile-bio">
         <p>
-          代々続く神職の家系に生まれ、幼少の頃より目に見えぬものの気配とともに過ごしてまいりました。
+          【霊視 × "お寺の教え"で願いを叶える】
         </p>
         <p style="margin-top:16px;">
-          人の心に宿る微細な揺れや、言葉になる前の願い──<br>
-          それらを受け止め、道を照らすことに二十年以上の歳月を捧げています。
+          400年の歴史を持つ稲荷の眼で、嘘すら見抜く霊視鑑定師。<br>
+          幼少の頃より目に見えないものの気配とともに過ごし、<br>
+          お寺の教えと霊視を掛け合わせた独自の鑑定を確立しました。
         </p>
         <p style="margin-top:16px;">
-          現在は九州の地に身を置き、<br>
-          ご縁のあった方々と一対一で向き合う日々を重ねております。
+          片思い・臨時収入・復縁・対人関係を中心に、<br>
+          これまで2,000人以上の縁と運命を読み解いてきました。
         </p>
       </div>
       <div class="profile-stats">
         <div class="stat-item">
-          <div class="stat-num">20年以上</div>
-          <div class="stat-label">鑑定の研鑽</div>
+          <div class="stat-num">14年</div>
+          <div class="stat-label">占い師歴</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">3,000件超</div>
-          <div class="stat-label">ご相談実績</div>
+          <div class="stat-num">2,000人+</div>
+          <div class="stat-label">救済実績</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">400年</div>
+          <div class="stat-label">稲荷の歴史</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== VOICE SECTION ===== -->
+<!-- VOICE -->
 <section class="voice-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">御守りを受け取った方の声</h2>
     <div class="voice-cards fade-in">
       <div class="voice-card">
         <p>
-          御守りをいただく前は、毎晩のように将来への不安で眠れず、仕事でも些細なミスを繰り返していました。でも御守りを身につけてから、まず眠れるようになって、気がつけば職場での人間関係もほぐれていきました。心の芯に「大丈夫」という安心感が静かに灯ったような感覚です。
+          3年間ずっと片思いしていた人がいて、もう諦めようとしていました。鑑定でいとさんに「縁はある、でも今は乱れている」と言われて、御守りを受け取ってから1ヶ月後に彼から連絡がきました。あの日鑑定を受けていなかったら、きっと諦めていたと思います。
+        </p>
+        <p class="voice-attr">── 20代女性</p>
+      </div>
+      <div class="voice-card">
+        <p>
+          復縁を諦めかけていましたが、「まだ縁は切れていない」という言葉に救われました。御守りを受け取ってから不思議と気持ちが落ち着いて、自然な流れで連絡を取り合えるようになりました。今は少しずつ距離が縮まっています。
+        </p>
+        <p class="voice-attr">── 30代女性</p>
+      </div>
+      <div class="voice-card">
+        <p>
+          仕事もお金も全部うまくいかない時期が続いていました。いとさんの鑑定で「金運の縁が詰まっている」と言われ、御守りを持ち始めてから臨時収入が入るようになり、職場の人間関係も驚くほど改善されました。
+        </p>
+        <p class="voice-attr">── 40代男性</p>
+      </div>
+      <div class="voice-card">
+        <p>
+          職場のトラブルが絶えず、毎日が辛かったです。鑑定では「対人の縁が乱れている、でも変えられる」と言っていただき、御守りを受け取ってから1ヶ月で人間関係が嘘みたいに穏やかになりました。
         </p>
         <p class="voice-attr">── 30代女性・会社員</p>
-      </div>
-      <div class="voice-card">
-        <p>
-          離婚を経験してから何年も、新しい一歩を踏み出すことができずにいました。御守りを受け取ってからは、不思議と「もう一度やり直してみよう」と自然に思えるようになりました。今では新しい趣味も始めて、笑顔で過ごせる日が明らかに増えています。
-        </p>
-        <p class="voice-attr">── 40代女性・パート</p>
-      </div>
-      <div class="voice-card">
-        <p>
-          子育てが一段落してから、自分が何のために生きているのか分からなくなっていました。御守りを受け取ってからは、ふと「自分のために何かしてみよう」と思えるようになり、昔好きだった書道教室に通い始めました。家の中の空気も少しずつ柔らかくなってきた気がしています。
-        </p>
-        <p class="voice-attr">── 50代女性・主婦</p>
-      </div>
-      <div class="voice-card">
-        <p>
-          派遣の契約が切れるたびに「次はあるのか」という恐怖に追い詰められていました。御守りを受け取ってから、不思議と焦りが和らいで、面接でも落ち着いて話せるようになったんです。結果、一ヶ月後に条件の良い長期の職場が決まりました。
-        </p>
-        <p class="voice-attr">── 50代男性・派遣社員</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHY 5 SECTION ===== -->
+<!-- WHY 5 -->
 <section class="why-section">
   <div class="section-inner fade-in">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">なぜ「5名様」なのか</h2>
     <div class="why-text">
       <p>
-        波動を深く霊視するという行為は、<br>
+        稲荷の眼で縁を深く霊視するという行為は、<br>
         わたし自身の霊力と深く結びついています。
       </p>
       <p style="margin-top:24px;">
-        お一人おひとりに全身全霊で向き合う以上、<br>
+        お一人おひとりの縁と運命に全身全霊で向き合う以上、<br>
         同時にお受けできる数には限りがございます。
       </p>
       <p style="margin-top:24px;">
         さらに、鑑定後に御守りを奉製できるのは<br>
-        わたしの波動と特に親和性が高い方のみ。<br>
+        わたしの霊力と特に親和性が高い方のみ。<br>
         すべての方にお届けすることは叶いません。
       </p>
       <p style="margin-top:24px;">
@@ -851,37 +647,37 @@ body {
   </div>
 </section>
 
-<!-- ===== PRICING SECTION ===== -->
+<!-- PRICING -->
 <section class="pricing-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title" style="color: var(--paper);">特別販売</h2>
     <div class="pricing-card fade-in">
-      <h3 class="pricing-title">専魂御守鑑定</h3>
-      <p class="pricing-subtitle">あなたの波動を霊視で詳しく読み解く特別鑑定</p>
+      <h3 class="pricing-title">縁結び御守鑑定</h3>
+      <p class="pricing-subtitle">縁と運命を霊視で読み解く特別鑑定</p>
       <p class="original-price">通常価格 &yen;9,800</p>
       <div class="special-price">
         <span class="yen">&yen;</span>1,111<br>
         <span class="tax">（税込）</span>
       </div>
       <p class="pricing-reason">
-        特別なご縁を結べるよう、<br>
+        ご縁を結ぶ特別な3日間に、<br>
         特別なお値段でお届けいたします。
       </p>
       <ul class="pricing-includes">
-        <li>あなたの波動の状態を詳細に霊視鑑定</li>
+        <li>縁・波動の状態を詳細に霊視鑑定</li>
         <li>鑑定結果をLINEにて鑑定文でお届け</li>
         <li>VIP専用LINEへのご招待・個別対応</li>
-        <li>波動の相性が深い方には御守り奉製のご案内</li>
+        <li>縁の深い方には御守り奉製のご案内</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ SECTION ===== -->
+<!-- FAQ -->
 <section class="faq-section">
   <div class="section-inner">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title">よくあるご質問</h2>
     <div class="faq-list fade-in">
       <div class="faq-item">
@@ -899,7 +695,7 @@ body {
           <span class="toggle">+</span>
         </div>
         <div class="faq-a">
-          <p>御守りの奉製には、わたし自身の波動との相性が深く関わります。鑑定の結果、特に相性が良いと感じた方にのみ別途ご案内させていただきます。すべての方にお届けできるわけではございませんので、あらかじめご了承ください。</p>
+          <p>御守りの奉製には、わたし自身の霊力との相性が深く関わります。鑑定の結果、特に縁の深い方にのみ別途ご案内させていただきます。すべての方にお届けできるわけではございませんので、あらかじめご了承ください。</p>
         </div>
       </div>
       <div class="faq-item">
@@ -908,7 +704,7 @@ body {
           <span class="toggle">+</span>
         </div>
         <div class="faq-a">
-          <p>ヒアリングシートをLINEにてお送りいたしますので、そちらにお答えください。</p>
+          <p>ヒアリングシートをLINEにてお送りいたしますので、そちらにお答えください。お悩みの内容（片思い・復縁・金運・対人関係など）をお聞きします。</p>
         </div>
       </div>
       <div class="faq-item">
@@ -942,89 +738,82 @@ body {
   </div>
 </section>
 
-<!-- ===== CTA SECTION ===== -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="section-inner fade-in">
-    <p class="section-torii">&#x26E9;</p>
+    <p class="section-torii">⛩</p>
     <h2 class="section-title" style="margin-bottom:30px;">
-      まずはあなたの波動を、<br>知ることから始めてみませんか
+      まずは、あなたの縁の状態を<br>知ることから始めてみませんか
     </h2>
     <p class="cta-text">
       いま、このページにたどり着いたこと自体が、<br>
-      ひとつのご縁だと感じています。<br><br>
-      あなたの波動の"いま"を知ることで、<br>
-      本当に必要な護りの形が見えてきます。<br><br>
-      もし心のどこかに「知りたい」という灯りがあるなら、<br>
-      どうぞその直感を信じてみてください。
+      ひとつのご縁だとわたしは感じています。<br><br>
+      片思い、復縁、お金、人間関係──<br>
+      うまくいかない理由は、必ずあります。<br><br>
+      縁の状態を知ることが、<br>
+      運命を好転させる最初の一歩です。
     </p>
     <a href="#" class="cta-button" id="cta-main-btn">
-      専魂御守鑑定に申し込む
+      ✦ 縁結び御守鑑定に申し込む ✦
     </a>
     <p class="cta-note">※ タップすると申し込みページに移動します</p>
-    <div class="cta-remaining">
-      残り <strong>5</strong> 名様
-    </div>
+    <div class="cta-remaining">残り <strong>5</strong> 名様</div>
     <div style="margin-top:20px;">
       <p class="countdown-sublabel">◆ 販売受付期間 ◆</p>
-      <p class="countdown-sublabel">2026年4月1日（水）19:00 〜 4月5日（日）23:59</p>
+      <p class="countdown-sublabel">2026年3月29日（日）19:00 〜 3月31日（火）23:59</p>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="footer">
-  <p>&copy; 2026 澪 ─ All Rights Reserved.</p>
+  <p>&copy; 2026 いと ─ All Rights Reserved.</p>
 </footer>
 
-<!-- ===== PRE-LAUNCH MODAL ===== -->
+<!-- MODAL -->
 <div class="prelaunch-overlay" id="prelaunchModal">
   <div class="prelaunch-modal">
-    <div class="prelaunch-torii">&#x26E9;</div>
-    <h3 class="prelaunch-title">
-      まだお申し込みは開始しておりません
-    </h3>
+    <div class="prelaunch-torii">⛩</div>
+    <h3 class="prelaunch-title">まだお申し込みは開始しておりません</h3>
     <div class="prelaunch-divider"></div>
     <p class="prelaunch-text">
-      専魂御守鑑定のお申し込み受付は<br>
-      2026年4月1日（水）19:00 より開始いたします。<br><br>
+      縁結び御守鑑定のお申し込み受付は<br>
+      2026年3月29日（日）19:00 より開始いたします。<br><br>
       開始までもうしばらくお待ちくださいませ。
     </p>
     <button class="prelaunch-close" onclick="closePrelaunch()">閉じる</button>
   </div>
 </div>
 
-<!-- ===== STICKY CTA ===== -->
+<!-- STICKY CTA -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#" class="sticky-cta-btn" id="sticky-btn">&#x2726; 専魂御守鑑定に申し込む &#x2726;</a>
-  <p class="sticky-cta-sub">5名様限定｜4/5 23:59 まで</p>
+  <a href="#" class="sticky-cta-btn" id="sticky-btn">✦ 縁結び御守鑑定に申し込む ✦</a>
+  <p class="sticky-cta-sub">5名様限定｜3/31 23:59 まで</p>
 </div>
 
-<!-- ===== SCRIPTS ===== -->
 <script>
-// ===== Particles =====
+// Particles
 (function() {
-  const container = document.getElementById('particles');
+  const c = document.getElementById('particles');
   for (let i = 0; i < 20; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
     p.style.left = Math.random() * 100 + '%';
     p.style.animationDelay = Math.random() * 8 + 's';
     p.style.animationDuration = (6 + Math.random() * 6) + 's';
-    container.appendChild(p);
+    c.appendChild(p);
   }
 })();
 
-// ===== Countdown Timer =====
+// Countdown
 (function() {
-  const startDate = new Date('2026-04-01T19:00:00+09:00');
-  const endDate   = new Date('2026-04-05T23:59:59+09:00');
-
+  const startDate = new Date('2026-03-29T19:00:00+09:00');
+  const endDate   = new Date('2026-03-31T23:59:59+09:00');
   function update() {
     const now = new Date();
     const label  = document.getElementById('countdown-label');
     const status = document.getElementById('countdown-status');
     let target;
-
     if (now < startDate) {
       target = startDate;
       label.textContent = '◆ 販売開始まで ◆';
@@ -1032,85 +821,62 @@ body {
     } else if (now < endDate) {
       target = endDate;
       label.textContent = '◆ 販売終了まで ◆';
-      status.textContent = '\uD83D\uDD34 現在受付中';
+      status.textContent = '🔴 現在受付中';
     } else {
-      document.getElementById('cd-days').textContent  = '00';
-      document.getElementById('cd-hours').textContent = '00';
-      document.getElementById('cd-mins').textContent  = '00';
-      document.getElementById('cd-secs').textContent  = '00';
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => document.getElementById(id).textContent = '00');
       label.textContent  = '◆ 販売は終了しました ◆';
       status.textContent = 'ありがとうございました';
       return;
     }
-
     const diff = target - now;
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const m = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const s = Math.floor((diff % (1000*60)) / 1000);
-
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
     document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
     document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
     document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
     document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
   }
-  update();
-  setInterval(update, 1000);
+  update(); setInterval(update, 1000);
 })();
 
-// ===== Scroll Fade-in =====
+// Fade-in
 (function() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-    });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.15 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 })();
 
-// ===== Sticky CTA =====
+// Sticky CTA
 (function() {
   const sticky = document.getElementById('stickyCta');
   const hero = document.querySelector('.hero');
   window.addEventListener('scroll', () => {
-    const heroBottom = hero.getBoundingClientRect().bottom;
-    if (heroBottom < 0) { sticky.classList.add('show'); }
-    else { sticky.classList.remove('show'); }
+    sticky.classList.toggle('show', hero.getBoundingClientRect().bottom < 0);
   });
 })();
 
-// ===== Pre-launch Link Guard =====
+// Link guard
 (function() {
-  const startDate = new Date('2026-04-01T19:00:00+09:00');
-  // TODO: Replace with your actual shop URL
-  const shopUrl = '#';
-
-  function guardLink(e) {
-    const now = new Date();
-    if (now < startDate) {
+  const startDate = new Date('2026-03-29T19:00:00+09:00');
+  const shopUrl = '#'; // TODO: Replace with actual shop URL
+  function guard(e) {
+    if (new Date() < startDate) {
       e.preventDefault();
       document.getElementById('prelaunchModal').classList.add('show');
-    } else {
-      // Redirect to shop when sale is active
-      if (shopUrl !== '#') {
-        e.preventDefault();
-        window.open(shopUrl, '_blank');
-      }
+    } else if (shopUrl !== '#') {
+      e.preventDefault();
+      window.open(shopUrl, '_blank');
     }
   }
-  document.getElementById('cta-main-btn').addEventListener('click', guardLink);
-  document.getElementById('sticky-btn').addEventListener('click', guardLink);
+  document.getElementById('cta-main-btn').addEventListener('click', guard);
+  document.getElementById('sticky-btn').addEventListener('click', guard);
 })();
 
-function closePrelaunch() {
-  document.getElementById('prelaunchModal').classList.remove('show');
-}
-
-// ===== FAQ Toggle =====
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  item.classList.toggle('open');
-}
+function closePrelaunch() { document.getElementById('prelaunchModal').classList.remove('show'); }
+function toggleFaq(el) { el.closest('.faq-item').classList.toggle('open'); }
 </script>
 </body>
 </html>
